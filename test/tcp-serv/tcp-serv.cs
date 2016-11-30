@@ -55,12 +55,12 @@ namespace ConsoleApplication
             }  
         }  
     }  
-}  
-
 public static void Main(string[] args)  
 {  
     // Start the server  
     TcpHelper.StartServer(8080);  
     TcpHelper.Listen(); // Start listening.  
 }  
+}  
+
 
