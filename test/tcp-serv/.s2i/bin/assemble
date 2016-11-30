@@ -7,6 +7,8 @@ cp -Rf /tmp/src/. ./
 
 dotnet new
 
+mv tcp-serv.cs Program.cs
+
 echo "----------------------"
 ls -al
 echo "----------------------"
