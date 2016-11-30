@@ -7,6 +7,12 @@ namespace ConsoleApplication
  {  
     class TcpHelper
        {  
+          public static void Main(string[] args)  
+             {  
+                // Start the server  
+                TcpHelper.StartServer(8080);  
+                TcpHelper.Listen(); // Start listening.  
+             }  
         private static TcpListener listener { get; set; }  
         private static bool accept { get; set; } = false;  
    
@@ -55,12 +61,6 @@ namespace ConsoleApplication
             }  
         }  
     }  
-public static void Main(string[] args)  
-{  
-    // Start the server  
-    TcpHelper.StartServer(8080);  
-    TcpHelper.Listen(); // Start listening.  
-}  
 }  
 
 
