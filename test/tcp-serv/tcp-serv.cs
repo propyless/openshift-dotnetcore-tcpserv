@@ -43,18 +43,9 @@ namespace ConsoleApplication
                         var client = clientTask.Result;  
                         string message = "";  
    
-                        while (message != null && !message.StartsWith("quit"))
-                         {  
-                            byte[] data = Encoding.ASCII.GetBytes("Send next data: [enter 'quit' to terminate] ");  
-                            client.GetStream().Write(data, 0, data.Length);  
+                        byte[] data = Encoding.ASCII.GetBytes("HEAD / HTTP/1.0\r\n\r\nHello world!");  
+                        client.GetStream().Write(data, 0, data.Length);  
    
-                            byte[] buffer = new byte[1024];  
-                            client.GetStream().Read(buffer, 0, buffer.Length);  
-   
-                            message = Encoding.ASCII.GetString(buffer);  
-                            Console.WriteLine(message);  
-                        }  
-                        Console.WriteLine("Closing connection.");  
                         client.GetStream().Dispose();  
                     }  
                 }  
