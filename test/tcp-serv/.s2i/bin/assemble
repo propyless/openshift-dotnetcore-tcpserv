@@ -5,6 +5,14 @@ set -e
 echo "---> Copying application source ..."
 cp -Rf /tmp/src/. ./
 
+dotnet new
+
+echo "restoring..."
+dotnet restore
+
+echo "building..."
+dotnet build
+
 # Fix source directory permissions
 fix-permissions ./
 # set permissions for any installed artifacts
