@@ -42,7 +42,7 @@ namespace ConsoleApplication
                         Console.WriteLine("Client connected. Waiting for data.");  
                         var client = clientTask.Result;  
    
-                        byte[] data = Encoding.ASCII.GetBytes("HEAD / HTTP/1.0\r\n\r\nHello world!");  
+                        byte[] data = Encoding.ASCII.GetBytes("Hello world!");  
                         client.GetStream().Write(data, 0, data.Length);  
    
                         client.GetStream().Dispose();  
