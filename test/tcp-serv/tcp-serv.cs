@@ -1,3 +1,6 @@
+// The was taken from the URL below. It was modified to not read input from the socket.
+// http://www.c-sharpcorner.com/article/building-a-tcp-server-in-net-core-on-ubuntu/
+
 using System;  
 using System.Net;  
 using System.Text;  
